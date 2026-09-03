@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f1312;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #fff9f9;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #555;
+}
+
+.card {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    background: #eef8f6;
+
+    border: 1px solid #000000;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(238, 238, 238, 0.08);
+}
+
+.codigo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.codigo span {
+    color: #222;
+
+    font-size: clamp(45px, 8vw, 80px);
+
+    filter: blur(20px);
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+
+.codigo span:hover,
+.codigo span:active {
+    filter: blur(0);
+    transform: scale(1.08);
+
+    background: #000000;
+}
+
+
+.codigo span:hover + span {
+    filter: blur(6px);
+}
+
+
+.codigo span:hover + span + span {
+    filter: blur(10px);
+}
+
+
+.codigo span:has(+ span:hover) {
+    filter: blur(6px);
+}
+
+
+.codigo span:has(+ span + span:hover) {
+    filter: blur(10px);
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .codigo {
+        gap: 10px;
+    }
+
+    .codigo span {
+        font-size: 45px;
+    }
+}
+
