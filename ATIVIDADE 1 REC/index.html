@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 01 - Controle do Equipamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fundo">
+
+    <main class="container">
+        <header>
+            <h1>Controle do Equipamento</h1>
+            <p>Desenvolva a interface solicitada na avaliação.</p>
+        </header>
+
+        <section id="controle" class="card">
+            <!-- TAREFA 01:
+                 Crie aqui o status, os botões e o seletor de cor.
+            -->
+            <button id="status" onclick="ligaDesliga()">Status: Desligado</button>
+            <input type="color" id="cor" onchange="trocarCor()" disabled>
+            <button onclick="reset()" id="reiniciar">Reiniciar</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
